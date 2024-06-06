@@ -2,7 +2,7 @@
   "name": "pandapay-landingpage-react",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://faculitterio.github.io/pandapay-landingpage",
+  "homepage": "https://FacuLitterio.github.io/pandapay-landingpage",
   "type": "module",
   "scripts": {
     "dev": "vite",
