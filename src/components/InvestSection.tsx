@@ -1,5 +1,5 @@
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import { Paper, Stack, Typography } from "@mui/material";
+import { Hidden, Paper, Stack, Typography } from "@mui/material";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import MuiAccordionSummary, {
@@ -98,19 +98,21 @@ const InvestSection = () => {
       }}
     >
       <Stack direction="row" spacing={5}>
-        <Paper
-          elevation={0}
-          sx={{
-            width: 0.5,
-            height: 1,
-            px: 10,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img src={Image} style={{ transform: "scale(.9)" }} />
-        </Paper>
+        <Hidden smDown>
+          <Paper
+            elevation={0}
+            sx={{
+              width: 0.5,
+              height: 1,
+              px: 10,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src={Image} style={{ transform: "scale(.9)" }} />
+          </Paper>
+        </Hidden>
         <Stack spacing={3} sx={{ maxWidth: 530, px: 2 }}>
           <AnimatedTitle
             variant="h4"

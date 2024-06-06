@@ -31,7 +31,7 @@ const TransaccionesSection = () => {
   const isSmDevice = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Section id="Transacciones" sx={{ mt: { xs: 0, md: DEFAULT_MARGIN_TOP } }}>
+    <Section id="Transacciones" sx={{ mt: DEFAULT_MARGIN_TOP }}>
       <Grid
         container
         justifyContent="space-evenly"

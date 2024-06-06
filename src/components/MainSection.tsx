@@ -51,11 +51,11 @@ const MainSection = () => {
       <Grid
         container
         sx={{
-          px: { xs: 4, sm: 4, md: 8, lg: 22 },
+          px: { xs: 4, sm: 4, md: 8, lg: 12 },
           py: { xs: 5, md: 8 },
         }}
         alignItems="center"
-        justifyContent="space-between"
+        justifyContent="space-around"
       >
         <Grid item xs={12} sm={10} md={6}>
           <Stack spacing={2}>
