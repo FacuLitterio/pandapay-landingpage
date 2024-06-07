@@ -9,7 +9,6 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
-  Paper,
   Stack,
   useMediaQuery,
   useTheme,
@@ -17,11 +16,10 @@ import {
 import DevicePaymentImage from "common/assets/Servicios/Image.jpg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
+import ImageContainer from "common/components/ImageContainer";
 import Section from "common/components/Section";
 import { DEFAULT_SPACING } from "common/constants";
 import { motion } from "framer-motion";
-
-const AnimatedPaper = motion(Paper);
 
 const SERVICIOS = [
   {
@@ -69,27 +67,7 @@ const ServiciosSection = () => {
       >
         {isSmDevice && (
           <Grid item xs={8} md={6} lg={5}>
-            <AnimatedPaper
-              initial={{ opacity: 0, bottom: 10 }}
-              whileInView={{ opacity: 1, bottom: 0 }}
-              transition={{ delay: 0.2 }}
-              elevation={4}
-              sx={{
-                height: 1,
-                maxHeight: 520,
-                width: 1,
-                maxWidth: 450,
-                borderRadius: 20,
-                outlineColor: (theme) => theme.palette.primary.main,
-                outlineWidth: 2.5,
-                outlineStyle: "dashed",
-                outlineOffset: 10,
-                margin: "0 auto",
-                background: `url(${DevicePaymentImage}) no-repeat`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            />
+            <ImageContainer src={DevicePaymentImage} />
           </Grid>
         )}
 
