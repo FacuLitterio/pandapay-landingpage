@@ -96,7 +96,7 @@ const FAQSection = () => {
           <AnimatedTitle
             sx={{ maxWidth: 350 }}
             text="Preguntas Frecuentes"
-            primaryWord=""
+            primaryWord="Preguntas"
           />
         </Grid>
         <Grid item xs={12} md={10}>

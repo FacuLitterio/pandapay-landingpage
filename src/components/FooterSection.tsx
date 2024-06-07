@@ -62,7 +62,8 @@ const FooterSection = () => {
       sx={{
         mt: DEFAULT_MARGIN_TOP,
         px: { xs: 5, md: 8, lg: 13, xl: 15 },
-        py: { xs: 5, lg: 8 },
+        pt: { xs: 5, lg: 8 },
+        pb: 3,
         bgcolor: "primary.main",
         borderRadius: "0px 20px 0px 0px",
       }}

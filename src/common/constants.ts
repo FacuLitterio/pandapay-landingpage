@@ -8,6 +8,8 @@ import VisaLogo from "common/assets/MediosPago/Visa_Inc._logo.svg";
 
 export const DEFAULT_MARGIN_TOP = 12;
 export const DEFAULT_SPACING = 10;
+export const DEFAULT_ELEVATION = 3;
+export const DEFAULT_BORDER_RADIUS = 5;
 export const MEDIOS_DE_PAGO_LOGOS = [
   VisaLogo,
   MercadoPagoLogo,

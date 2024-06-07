@@ -1,16 +1,13 @@
-import {
-  Grid,
-  Paper,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Grid, Hidden, Paper, Stack, Typography } from "@mui/material";
 import Image from "common/assets/Transacciones/Image.jpg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
 import Section from "common/components/Section";
-import { DEFAULT_MARGIN_TOP } from "common/constants";
+import {
+  DEFAULT_BORDER_RADIUS,
+  DEFAULT_ELEVATION,
+  DEFAULT_MARGIN_TOP,
+} from "common/constants";
 import useMotionValue from "common/hooks/useMotionValue";
 import { motion } from "framer-motion";
 
@@ -27,18 +24,16 @@ const TransaccionesSection = () => {
   const value2 = useMotionValue({ value: 50 });
   const value3 = useMotionValue({ value: 50000 });
 
-  const theme = useTheme();
-  const isSmDevice = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
-    <Section id="Transacciones" sx={{ mt: DEFAULT_MARGIN_TOP }}>
+    <Section id="Transacciones" sx={{ mt: DEFAULT_MARGIN_TOP + 3 }}>
       <Grid
         container
-        justifyContent="space-evenly"
+        justifyContent="space-around"
+        columnSpacing={5}
         p={2}
         sx={{ height: 1, width: 1 }}
       >
-        <Grid item xs={12} sm={8} md={5}>
+        <Grid item xs={12} sm={8} md={6}>
           <Stack spacing={3}>
             <AnimatedTitle
               text="Transacciones Fáciles en Cualquier Lugar, en Todo Momento"
@@ -58,8 +53,7 @@ const TransaccionesSection = () => {
                   key={index}
                   item
                   xs={10}
-                  sm={6}
-                  md={4}
+                  sm={4}
                   sx={{ display: "flex", justifyContent: "space-around" }}
                 >
                   <AnimatedPaper
@@ -69,8 +63,9 @@ const TransaccionesSection = () => {
                       width: 150,
                       p: 2,
                       m: 1,
+                      borderRadius: DEFAULT_BORDER_RADIUS,
                     }}
-                    elevation={4}
+                    elevation={DEFAULT_ELEVATION}
                     initial={{ opacity: 0, bottom: 10 }}
                     whileInView={{ opacity: 1, bottom: 0 }}
                     transition={{ delay: 0.1 }}
@@ -107,8 +102,8 @@ const TransaccionesSection = () => {
             </Grid>
           </Stack>
         </Grid>
-        {!isSmDevice && (
-          <Grid item xs={12} sm={8} md={5} lg={5} px={2}>
+        <Hidden mdDown>
+          <Grid item md={6} lg={5} px={2}>
             <AnimatedPaper
               initial={{ opacity: 0, bottom: 10 }}
               whileInView={{ opacity: 1, bottom: 0 }}
@@ -131,7 +126,7 @@ const TransaccionesSection = () => {
               }}
             />
           </Grid>
-        )}
+        </Hidden>
       </Grid>
     </Section>
   );

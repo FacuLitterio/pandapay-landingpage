@@ -16,7 +16,7 @@ import TestimonioImage2 from "common/assets/Testimonios/Testimonio2.png";
 import TestimonioImage3 from "common/assets/Testimonios/Testimonio3.png";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
-import { DEFAULT_MARGIN_TOP } from "common/constants";
+import { DEFAULT_BORDER_RADIUS } from "common/constants";
 import Carousel from "react-material-ui-carousel";
 
 const TESTIMONIOS = [
@@ -27,7 +27,7 @@ const TESTIMONIOS = [
     rating: 4,
     url: TestimonioImage1,
     description:
-      "'Desde que comenzamos a utilizar PandaPay, hemos experimentado una notable mejora en la eficiencia de nuestros cobros y transacciones. Su atención personalizada y las soluciones a medida realmente han hecho la diferencia para nuestro negocio.'",
+      "❝Desde que comenzamos a utilizar PandaPay, hemos experimentado una notable mejora en la eficiencia de nuestros cobros y transacciones. Su atención personalizada y las soluciones a medida realmente han hecho la diferencia para nuestro negocio.❝",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const TESTIMONIOS = [
     url: TestimonioImage2,
     rating: 5,
     description:
-      "'PandaPay ha simplificado enormemente nuestro proceso de pagos. La facilidad de uso de su plataforma y la seguridad que ofrecen en cada transacción nos han brindado tranquilidad y confianza en nuestro día a día.'",
+      "❝PandaPay ha simplificado enormemente nuestro proceso de pagos. La facilidad de uso de su plataforma y la seguridad que ofrecen en cada transacción nos han brindado tranquilidad y confianza en nuestro día a día.❝",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const TESTIMONIOS = [
     rating: 5,
     url: TestimonioImage3,
     description:
-      "'¡Increíble servicio! Siempre que hemos tenido alguna consulta o requerimiento, el equipo de PandaPay ha estado disponible y ha resuelto nuestras inquietudes de manera rápida y eficiente. Definitivamente los recomiendo.'",
+      "❝¡Increíble servicio! Siempre que hemos tenido alguna consulta o requerimiento, el equipo de PandaPay ha estado disponible y ha resuelto nuestras inquietudes de manera rápida y eficiente. Definitivamente los recomiendo.❝",
   },
 ];
 
@@ -69,10 +69,9 @@ const TestimoniosSection = () => {
       sx={{
         width: 0.9,
         bgcolor: "primary.main",
-        mt: DEFAULT_MARGIN_TOP,
         py: 5,
         mx: "auto",
-        borderRadius: 5,
+        borderRadius: DEFAULT_BORDER_RADIUS,
       }}
     >
       <Stack alignItems="center" spacing={8}>

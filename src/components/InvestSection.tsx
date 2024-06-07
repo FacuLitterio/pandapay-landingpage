@@ -1,5 +1,5 @@
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import { Hidden, Paper, Stack, Typography } from "@mui/material";
+import { Box, Hidden, Paper, Stack, Typography } from "@mui/material";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import MuiAccordionSummary, {
@@ -10,7 +10,7 @@ import { styled } from "@mui/material/styles";
 import Image from "common/assets/Investment/investment2.svg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
-import { DEFAULT_MARGIN_TOP } from "common/constants";
+import { DEFAULT_BORDER_RADIUS, DEFAULT_ELEVATION } from "common/constants";
 import React, { useState } from "react";
 
 const Accordion = styled((props: AccordionProps) => (
@@ -88,30 +88,29 @@ const InvestSection = () => {
   return (
     <Paper
       id="Investment"
-      variant="outlined"
+      elevation={DEFAULT_ELEVATION}
       sx={{
         width: 0.9,
-        mt: DEFAULT_MARGIN_TOP,
         py: 5,
+        px: 2,
         mx: "auto",
-        borderRadius: 5,
+        borderRadius: DEFAULT_BORDER_RADIUS,
       }}
     >
       <Stack direction="row" spacing={5}>
-        <Hidden smDown>
-          <Paper
-            elevation={0}
+        <Hidden mdDown>
+          <Box
             sx={{
-              width: 0.5,
+              width: { md: 0, lg: 0.5 },
               height: 1,
-              px: 10,
+              px: 5,
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
             <img src={Image} style={{ transform: "scale(.9)" }} />
-          </Paper>
+          </Box>
         </Hidden>
         <Stack spacing={3} sx={{ maxWidth: 530, px: 2 }}>
           <AnimatedTitle
@@ -120,6 +119,7 @@ const InvestSection = () => {
             color="text.primary"
             text="Invierte y Genera Rendimientos"
             primaryWord="Invierte"
+            showDecorationBar={false}
           />
           <AnimatedSubtitle
             paragraph

@@ -5,6 +5,7 @@ import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import {
   Avatar,
   Grid,
+  Hidden,
   List,
   ListItem,
   ListItemAvatar,
@@ -13,7 +14,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import DevicePaymentImage from "common/assets/Servicios/Image.jpg";
+import DevicePaymentImage from "common/assets/Servicios/ServiciosMainImage.jpeg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
 import ImageContainer from "common/components/ImageContainer";
@@ -59,17 +60,12 @@ const ServiciosSection = () => {
   const isSmDevice = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Section id="Servicios">
-      <Grid
-        container
-        spacing={DEFAULT_SPACING}
-        justifyContent="space-evenly"
-        p={2}
-      >
-        {isSmDevice && (
-          <Grid item xs={8} md={6} lg={5}>
+      <Grid container spacing={DEFAULT_SPACING} justifyContent="center" p={2}>
+        <Hidden mdDown>
+          <Grid item md={6} lg={5}>
             <ImageContainer src={DevicePaymentImage} />
           </Grid>
-        )}
+        </Hidden>
 
         <Grid item xs={12} sm={8} md={6} lg={5}>
           <Stack spacing={2}>

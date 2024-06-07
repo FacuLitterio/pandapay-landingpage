@@ -1,7 +1,6 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Box, Button, Grid, Hidden, Paper, Stack } from "@mui/material";
-import PatternSVG from "common/assets/Main/Pattern.svg";
-import DevicePaymentImage from "common/assets/Main/PaymentDevice2.jpg";
+import DevicePaymentImage from "common/assets/Main/PostnetMain.png";
 import AnimateWhileView from "common/components/AnimateWhileView";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
@@ -31,21 +30,11 @@ const MainSection = () => {
         component="section"
         sx={{
           mt: APPBAR_OFFSET,
-          background: `url(${PatternSVG}) no-repeat`,
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
+          px: { xs: 4, sm: 12, md: 18, xl: 25 },
+          py: { xs: 5, sm: 10, xl: 15 },
         }}
       >
-        <Grid
-          container
-          sx={{
-            px: { xs: 4, sm: 12, xl: 25 },
-            py: { xs: 5, md: 8, lg: 15 },
-          }}
-          alignItems="center"
-          justifyContent="center"
-          spacing={3}
-        >
+        <Grid container alignItems="center" justifyContent="center" spacing={5}>
           <Grid item xs={12} md={6} xl={4}>
             <Stack spacing={2}>
               <AnimateWhileView>
@@ -63,7 +52,7 @@ const MainSection = () => {
                 primaryWord="Pay!"
               />
               <AnimatedSubtitle
-                variant="subtitle1"
+                variant="subtitle2"
                 color="text.secondary"
                 sx={{ fontSize: ".9rem" }}
                 text="Ofrecemos soluciones de cobro personalizadas para impulsar el

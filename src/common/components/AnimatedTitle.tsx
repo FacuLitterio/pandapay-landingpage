@@ -6,6 +6,7 @@ import React from "react";
 type AnimatedTitleProps = {
   text: string;
   primaryWord?: string;
+  showDecorationBar?: boolean;
 } & TypographyProps;
 
 const charVariants = {
@@ -27,6 +28,7 @@ const DecorationBar = styled("span")(({ theme }) => ({
 const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
   text,
   primaryWord,
+  showDecorationBar = true,
   ...rest
 }) => {
   const { variant = "h4", color = "text.primary", fontWeight = 600 } = rest;
@@ -61,7 +63,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       {...(rest as any)}
     >
-      <DecorationBar />
+      {showDecorationBar && <DecorationBar />}
       {textChars.map((char, i) => {
         return (
           <motion.span

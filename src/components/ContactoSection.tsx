@@ -2,6 +2,7 @@ import SendIcon from "@mui/icons-material/Send";
 import {
   Button,
   Grid,
+  Hidden,
   Paper,
   Stack,
   TextField,
@@ -10,7 +11,11 @@ import {
 import ContactImage from "common/assets/Contacto/ContactImage.svg";
 import AnimationLottie from "common/assets/Contacto/Singing Contract.json";
 import Section from "common/components/Section";
-import { DEFAULT_SPACING } from "common/constants";
+import {
+  DEFAULT_BORDER_RADIUS,
+  DEFAULT_ELEVATION,
+  DEFAULT_SPACING,
+} from "common/constants";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Lottie from "react-lottie";
@@ -24,19 +29,24 @@ const ContactoSection = () => {
         alignItems="center"
         spacing={DEFAULT_SPACING}
       >
-        <Grid item xs={5}>
-          <Lottie
-            src={ContactImage}
-            style={{ transform: "scale(1.2)" }}
-            options={{
-              loop: true,
-              autoplay: true,
-              animationData: AnimationLottie,
-            }}
-          />
-        </Grid>
+        <Hidden mdDown>
+          <Grid item xs={5}>
+            <Lottie
+              src={ContactImage}
+              style={{ transform: "scale(1.2)" }}
+              options={{
+                loop: true,
+                autoplay: true,
+                animationData: AnimationLottie,
+              }}
+            />
+          </Grid>
+        </Hidden>
         <Grid item xs={12} md={8} lg={6}>
-          <Paper elevation={4} sx={{ p: 4 }}>
+          <Paper
+            elevation={DEFAULT_ELEVATION}
+            sx={{ p: 4, borderRadius: DEFAULT_BORDER_RADIUS }}
+          >
             <Stack spacing={2}>
               <Typography
                 variant="h5"
