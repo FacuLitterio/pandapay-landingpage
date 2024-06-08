@@ -1,6 +1,6 @@
 import { Avatar, Grid, Link, Stack, Typography } from "@mui/material";
 import PandaPayIcon from "common/assets/PandaPay_Logo.png";
-import { DEFAULT_MARGIN_TOP } from "common/constants";
+import { DEFAULT_BORDER_RADIUS, DEFAULT_MARGIN_TOP } from "common/constants";
 import RedesSociales from "./RedesSociales";
 
 const FooterSection = () => {
@@ -65,7 +65,7 @@ const FooterSection = () => {
         pt: { xs: 5, lg: 8 },
         pb: 3,
         bgcolor: "primary.main",
-        borderRadius: "0px 20px 0px 0px",
+        borderRadius: `0px ${DEFAULT_BORDER_RADIUS}px 0px 0px`,
       }}
       component="footer"
       columnSpacing={4}

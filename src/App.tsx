@@ -6,6 +6,7 @@ import {
   createTheme,
   responsiveFontSizes,
 } from "@mui/material";
+import WhatsAppSpeedDial from "common/components/WhatsAppSpeedDial";
 import ContactoSection from "components/ContactoSection";
 import FAQSection from "components/FAQSection";
 import FooterSection from "components/FooterSection";
@@ -59,6 +60,7 @@ const App = () => {
           <TestimoniosSection />
           <ContactoSection />
           <FooterSection />
+          <WhatsAppSpeedDial />
         </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>

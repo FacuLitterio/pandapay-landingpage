@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { keyframes, styled } from "@mui/material/styles";
+import { DEFAULT_BORDER_RADIUS } from "common/constants";
 import React, { PropsWithChildren } from "react";
 
 const generateBoxShadow = (numStars: number): string => {
@@ -52,6 +53,7 @@ const StarLayer = styled("div")<StarLayerProps>(
     left: 0,
     right: 0,
     bottom: 0,
+    borderRadius: DEFAULT_BORDER_RADIUS,
     zIndex: -1,
     animation: `${animStar} ${animationDuration}s linear infinite`,
     "&:after": {
@@ -69,12 +71,18 @@ const StarLayer = styled("div")<StarLayerProps>(
 const StarBackground: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <Background>
-      <StarLayer size={4} boxShadow={shadowsSmall} animationDuration={50} />
-      <StarLayer size={5} boxShadow={shadowsMedium} animationDuration={100} />
-      <StarLayer size={6} boxShadow={shadowsBig} animationDuration={150} />
+      <StarLayer size={2} boxShadow={shadowsSmall} animationDuration={50} />
+      <StarLayer size={6} boxShadow={shadowsMedium} animationDuration={100} />
+      <StarLayer size={12} boxShadow={shadowsBig} animationDuration={150} />
       {children}
       <Box
-        sx={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: -1 }}
+        sx={{
+          position: "absolute",
+          bottom: -8,
+          left: 0,
+          right: 0,
+          zIndex: -1,
+        }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path

@@ -29,7 +29,7 @@ const ContactoSection = () => {
         alignItems="center"
         spacing={DEFAULT_SPACING}
       >
-        <Hidden mdDown>
+        <Hidden lgDown>
           <Grid item xs={5}>
             <Lottie
               src={ContactImage}
@@ -76,6 +76,10 @@ const ContactoSection = () => {
                     variant="contained"
                     color="primary"
                     startIcon={<SendIcon />}
+                    sx={{
+                      color: (theme) => theme.palette.background.paper,
+                      textTransform: "none",
+                    }}
                     size="large"
                   >
                     Enviar

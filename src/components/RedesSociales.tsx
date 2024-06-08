@@ -1,14 +1,19 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import { IconButton, Stack } from "@mui/material";
 import React from "react";
+
+const LINKEDIN_URL = "https://www.linkedin.com/company/panda-pay/";
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61558205289326";
+const INSTAGRAM_URL = "https://www.instagram.com/pandapay.ar/";
 
 const RedesSociales: React.FC<{ color?: string }> = (props) => {
   const { color = "text.primary" } = props;
   return (
     <Stack direction="row" spacing={1}>
       <IconButton
+        onClick={() => window.open(FACEBOOK_URL, "_blank")}
         size="small"
         sx={{
           color,
@@ -17,15 +22,17 @@ const RedesSociales: React.FC<{ color?: string }> = (props) => {
         <FacebookIcon sx={{ fontSize: "1.5rem" }} />
       </IconButton>
       <IconButton
+        onClick={() => window.open(INSTAGRAM_URL, "_blank")}
         size="small"
         sx={{
           color,
         }}
       >
-        <TwitterIcon sx={{ fontSize: "1.5rem" }} />
+        <InstagramIcon sx={{ fontSize: "1.5rem" }} />
       </IconButton>
       <IconButton
         size="small"
+        onClick={() => window.open(LINKEDIN_URL, "_blank")}
         sx={{
           color,
         }}

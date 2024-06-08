@@ -7,6 +7,7 @@ import AnimatedTitle from "common/components/AnimatedTitle";
 import ImageContainer from "common/components/ImageContainer";
 import StarBackground from "common/components/StarsBackground";
 import { MEDIOS_DE_PAGO_LOGOS } from "common/constants";
+import onClickWhatsApp from "common/helpers/onClickWhatsApp";
 import RedesSociales from "./RedesSociales";
 
 const APPBAR_OFFSET = "60px";
@@ -27,6 +28,7 @@ const MainSection = () => {
   return (
     <StarBackground>
       <Box
+        id="Inicio"
         component="section"
         sx={{
           mt: APPBAR_OFFSET,
@@ -41,7 +43,6 @@ const MainSection = () => {
                 <RedesSociales />
               </AnimateWhileView>
               <AnimatedTitle
-                id="Inicio"
                 sx={{
                   xs: { fontSize: ".6rem" },
                   md: { fontSize: "2rem" },
@@ -70,6 +71,7 @@ const MainSection = () => {
                     textTransform: "none",
                   }}
                   endIcon={<ArrowForwardIcon />}
+                  onClick={onClickWhatsApp}
                 >
                   Empezá a Cobrar
                 </Button>
