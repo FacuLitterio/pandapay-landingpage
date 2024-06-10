@@ -49,17 +49,18 @@ const MainSection = () => {
                   lg: { fontSize: "3rem" },
                 }}
                 variant="h3"
-                text="¡Potencia las Ventas de tu Negocio con PandaPay!"
+                text="¡Impulsa tus Ventas con PandaPay!"
                 primaryWord="Pay!"
               />
               <AnimatedSubtitle
                 variant="subtitle2"
                 color="text.secondary"
                 sx={{ fontSize: ".9rem" }}
-                text="Ofrecemos soluciones de cobro personalizadas para impulsar el
-              crecimiento de tu negocio. Desde dispositivos de venta variados
-              hasta opciones de acreditación flexibles, descubre cómo podemos
-              llevar tus ventas a otro nivel."
+                text={`Transforma tu negocio con nuestras soluciones de 
+                cobro personalizadas diseñadas para maximizar tus ingresos. 
+                Con una variedad de dispositivos de venta y opciones de acreditación 
+                flexibles, PandaPay es tu socio ideal para llevar tus ventas al siguiente nivel. 
+                ¡Descubre cómo podemos ayudarte a crecer y triunfar en el mercado!`}
               />
               <AnimateWhileView>
                 <Button
@@ -83,7 +84,10 @@ const MainSection = () => {
           </Grid>
           <Hidden mdDown>
             <Grid item md={6} xl={4}>
-              <ImageContainer src={DevicePaymentImage} />
+              <ImageContainer
+                src={DevicePaymentImage}
+                sx={{ maxHeight: 500 }}
+              />
             </Grid>
           </Hidden>
         </Grid>

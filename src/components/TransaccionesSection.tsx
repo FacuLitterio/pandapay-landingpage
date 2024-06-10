@@ -2,6 +2,7 @@ import { Grid, Hidden, Paper, Stack, Typography } from "@mui/material";
 import Image from "common/assets/Transacciones/Image.jpg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
+import ImageContainer from "common/components/ImageContainer";
 import Section from "common/components/Section";
 import {
   DEFAULT_BORDER_RADIUS,
@@ -40,11 +41,7 @@ const TransaccionesSection = () => {
               primaryWord="Transacciones Fáciles"
             />
             <AnimatedSubtitle
-              text="Explora cómo PandaPay te brinda soluciones únicas y altamente
-              efectivas para alcanzar con éxito los objetivos comerciales de tu
-              empresa. Con nuestra experiencia y compromiso, estamos aquí para
-              impulsar tu crecimiento y facilitar tus transacciones financieras
-              en todo lugar y en todo momento."
+              text="¡Transforma tu negocio con PandaPay! Nuestras soluciones únicas y altamente efectivas están diseñadas para ayudarte a alcanzar tus objetivos comerciales con éxito. Con nuestra experiencia y dedicación, impulsamos tu crecimiento y hacemos que tus transacciones financieras sean sencillas y seguras, sin importar dónde te encuentres. ¡Confía en PandaPay para llevar tus operaciones al siguiente nivel!"
               color="text.disabled"
             />
             <Grid container justifyContent="center" alignItems="center">
@@ -104,25 +101,11 @@ const TransaccionesSection = () => {
         </Grid>
         <Hidden mdDown>
           <Grid item md={6} lg={5} px={2}>
-            <AnimatedPaper
-              initial={{ opacity: 0, bottom: 10 }}
-              whileInView={{ opacity: 1, bottom: 0 }}
-              transition={{ delay: 0.2 }}
-              elevation={4}
+            <ImageContainer
+              src={Image}
               sx={{
-                height: 1,
-                maxHeight: 600,
-                width: 1,
-                maxWidth: 420,
+                maxHeight: 450,
                 borderRadius: "20px 20px 50% 50%",
-                outlineColor: (theme) => theme.palette.primary.main,
-                outlineWidth: 2.5,
-                outlineStyle: "dashed",
-                outlineOffset: 10,
-                margin: "0 auto",
-                background: `url(${Image}) no-repeat`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
               }}
             />
           </Grid>

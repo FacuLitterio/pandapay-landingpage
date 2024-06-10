@@ -27,28 +27,28 @@ const SERVICIOS = [
     id: 1,
     title: "Dispositivos de Cobro",
     description:
-      "Brindamos diversos dispositivos de cobro como SmartPOS, MiniPOS, Tablet, MPOS, Web y App.",
+      "Ofrecemos una amplia gama de dispositivos de cobro, incluyendo SmartPOS, MiniPOS, Tablet, MPOS, Web y App diseñados para adaptarse a las necesidades específicas de tu negocio.",
     icon: <CurrencyExchangeOutlinedIcon sx={{ fontSize: 30 }} />,
   },
   {
     id: 2,
     title: "Cashout en Locales de Cobros",
     description:
-      "Permite a tus usuarios realizar retiros de efectivo en locales de cobros de servicios como Pago24 de manera rápida y segura.",
+      "Permite a tus usuarios realizar retiros de efectivo de forma rápida y segura en locales de cobro de servicios como Pago24. Facilita el acceso a efectivo y mejora la experiencia de tus clientes con nuestras soluciones de cashout confiables.",
     icon: <CreditScoreOutlinedIcon sx={{ fontSize: 30 }} />,
   },
   {
     id: 3,
     title: "Asegurá tus Pagos Electrónicos",
     description:
-      "Ofrecemos seguridad total en todas tus transacciones y pagos electrónicos.",
+      "Ofrecemos máxima protección en todas tus operaciones y pagos electrónicos, asegurando la confianza y tranquilidad tanto para ti como para tus clientes.",
     icon: <VerifiedUserOutlinedIcon sx={{ fontSize: 30 }} />,
   },
   {
     id: 4,
     title: "Envío y Recepción de Transferencias con CVU",
     description:
-      "Permite el envío y recepción de transferencias de dinero a través de CVU con total seguridad y respaldo legal, conforme a la normativa vigente del Banco Central.",
+      "Facilita el envío y recepción de dinero con CVU, garantizando total seguridad y respaldo legal. Cumplimos con la normativa vigente del Banco Central para que tus transferencias sean rápidas, seguras y confiables.",
     icon: <AccountBalanceOutlinedIcon sx={{ fontSize: 30 }} />,
   },
 ];
@@ -62,7 +62,12 @@ const ServiciosSection = () => {
     <Section id="Servicios">
       <Grid container spacing={DEFAULT_SPACING} justifyContent="center" p={2}>
         <Hidden mdDown>
-          <Grid item md={6} lg={5}>
+          <Grid
+            item
+            md={6}
+            lg={5}
+            sx={{ display: "flex", alignItems: "center" }}
+          >
             <ImageContainer src={DevicePaymentImage} />
           </Grid>
         </Hidden>

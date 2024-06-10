@@ -16,6 +16,7 @@ import {
   DEFAULT_ELEVATION,
   DEFAULT_SPACING,
 } from "common/constants";
+import onClickWhatsApp from "common/helpers/onClickWhatsApp";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Lottie from "react-lottie";
@@ -66,16 +67,17 @@ const ContactoSection = () => {
               </Typography>
               <Stack width={1} spacing={2}>
                 <Stack direction="row" spacing={2}>
-                  <TextField label="Nombre" name="nombre" fullWidth />
+                  <TextField label="Nombre" name="nombre" fullWidth required />
                   <TextField label="Apellido" name="apellido" fullWidth />
                 </Stack>
-                <TextField label="Email" />
-                <TextField multiline label="Mensaje..." minRows={3} />
+                <TextField label="Email" required />
+                <TextField multiline label="Mensaje..." minRows={3} required />
                 <Stack direction="row" justifyContent="flex-end">
                   <Button
                     variant="contained"
                     color="primary"
                     startIcon={<SendIcon />}
+                    onClick={() => onClickWhatsApp()}
                     sx={{
                       color: (theme) => theme.palette.background.paper,
                       textTransform: "none",

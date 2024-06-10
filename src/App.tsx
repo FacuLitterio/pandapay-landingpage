@@ -7,6 +7,7 @@ import {
   responsiveFontSizes,
 } from "@mui/material";
 import WhatsAppSpeedDial from "common/components/WhatsAppSpeedDial";
+import CertificacionesSection from "components/CertificacionesSection";
 import ContactoSection from "components/ContactoSection";
 import FAQSection from "components/FAQSection";
 import FooterSection from "components/FooterSection";
@@ -59,6 +60,7 @@ const App = () => {
           <FAQSection />
           <TestimoniosSection />
           <ContactoSection />
+          <CertificacionesSection />
           <FooterSection />
           <WhatsAppSpeedDial />
         </Box>

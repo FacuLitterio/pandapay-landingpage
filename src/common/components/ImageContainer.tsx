@@ -1,11 +1,16 @@
-import { Paper } from "@mui/material";
+import { Paper, PaperProps } from "@mui/material";
 import { DEFAULT_BORDER_RADIUS, DEFAULT_ELEVATION } from "common/constants";
 import { motion } from "framer-motion";
 import React from "react";
 
 const AnimatedPaper = motion(Paper);
 
-const ImageContainer: React.FC<{ src: string }> = ({ src }) => {
+type ImageContainerProps = {
+  src: string;
+  sx?: PaperProps["sx"];
+};
+
+const ImageContainer: React.FC<ImageContainerProps> = ({ src, sx }) => {
   return (
     <AnimatedPaper
       initial={{ opacity: 0, bottom: 10 }}
@@ -13,7 +18,7 @@ const ImageContainer: React.FC<{ src: string }> = ({ src }) => {
       transition={{ delay: 0.2 }}
       elevation={DEFAULT_ELEVATION}
       sx={{
-        height: { md: 400, lg: 480 },
+        height: { md: 400, lg: 550 },
         width: "100%",
         maxWidth: 430,
         borderRadius: DEFAULT_BORDER_RADIUS,
@@ -25,6 +30,7 @@ const ImageContainer: React.FC<{ src: string }> = ({ src }) => {
         background: `url(${src}) no-repeat`,
         backgroundPosition: "center",
         backgroundSize: "cover",
+        ...sx,
       }}
     />
   );
