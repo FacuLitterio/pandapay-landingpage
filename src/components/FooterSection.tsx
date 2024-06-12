@@ -74,7 +74,7 @@ const FooterSection = () => {
   );
 
   const AvisoLegal = (
-    <Stack direction="row" spacing={1}>
+    <Stack direction="row" spacing={3} justifyContent="flex-end">
       <Typography variant="body2" color="background.paper">
         GRUPO PANDA SRL. (Pandapay) ofrece servicios de pago y no está
         autorizado por el Banco Central a operar como entidad financiera. Los
@@ -84,6 +84,16 @@ const FooterSection = () => {
         Servicios de Pago inscripto bajo el numero 34565 por Banco Central de la
         República Argentina. Pandapay es una marca registrada. Copyright 2024
       </Typography>
+      <a
+        href="http://qr.afip.gob.ar/?qr=d2YUzYtCdAjiB7J-BeY8sQ,,"
+        target="_F960AFIPInfo"
+      >
+        <img
+          src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"
+          height="150px"
+          width="100px"
+        />
+      </a>
     </Stack>
   );
 
