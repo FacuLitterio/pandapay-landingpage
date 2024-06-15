@@ -2,7 +2,7 @@
   "name": "pandapay-landingpage-react",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://pandapay.com.ar",
+  "homepage": "https://pandapay.com.ar",
   "type": "module",
   "scripts": {
     "dev": "vite",
