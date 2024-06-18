@@ -19,7 +19,7 @@ import MuiAccordionSummary, {
 } from "@mui/material/AccordionSummary";
 import { grey } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
-import Image from "common/assets/Investment/investment2.svg";
+import Image from "common/assets/Investment/investment1.svg";
 import AnimatedSubtitle from "common/components/AnimatedSubtitle";
 import AnimatedTitle from "common/components/AnimatedTitle";
 import {
@@ -102,7 +102,7 @@ const InvestSection = () => {
                 alignItems: "center",
               }}
             >
-              <img src={Image} style={{ transform: "scale(.8)" }} />
+              <img src={Image} style={{ transform: "scale(.9)" }} />
             </Box>
           </Hidden>
           <Stack spacing={3} sx={{ maxWidth: 530, px: 2 }}>

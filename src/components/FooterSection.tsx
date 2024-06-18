@@ -73,30 +73,6 @@ const FooterSection = () => {
     </Stack>
   );
 
-  const AvisoLegal = (
-    <Stack direction="row" spacing={3} justifyContent="flex-end">
-      <Typography variant="body2" color="background.paper">
-        GRUPO PANDA SRL. (Pandapay) ofrece servicios de pago y no está
-        autorizado por el Banco Central a operar como entidad financiera. Los
-        fondos acreditados en cuentas de pago no constituyen depósitos en una
-        entidad financiera ni están garantizados conforme legislación aplicable
-        a depósitos en entidades financieras. Grupo Panda SRL es Proveedor de
-        Servicios de Pago inscripto bajo el numero 34565 por Banco Central de la
-        República Argentina. Pandapay es una marca registrada. Copyright 2024
-      </Typography>
-      <a
-        href="http://qr.afip.gob.ar/?qr=d2YUzYtCdAjiB7J-BeY8sQ,,"
-        target="_F960AFIPInfo"
-      >
-        <img
-          src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"
-          height="150px"
-          width="100px"
-        />
-      </a>
-    </Stack>
-  );
-
   return (
     <Grid
       container
@@ -126,10 +102,32 @@ const FooterSection = () => {
       <Grid item xs={12} md={2} lg={3} p={2}>
         {LegalesInfo}
       </Grid>
-      <Grid item xs={12} md={9} lg={8} p={2}>
-        {AvisoLegal}
+      <Grid container item xs={12} md={9} lg={8} p={2} spacing={2}>
+        <Grid item xs={12}>
+          <Typography variant="body2" color="background.paper">
+            GRUPO PANDA SRL. (Pandapay) ofrece servicios de pago y no está
+            autorizado por el Banco Central a operar como entidad financiera.
+            Los fondos acreditados en cuentas de pago no constituyen depósitos
+            en una entidad financiera ni están garantizados conforme legislación
+            aplicable a depósitos en entidades financieras. Grupo Panda SRL es
+            Proveedor de Servicios de Pago inscripto bajo el numero 34565 por
+            Banco Central de la República Argentina. Pandapay es una marca
+            registrada. Copyright 2024
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <a
+            href="http://qr.afip.gob.ar/?qr=d2YUzYtCdAjiB7J-BeY8sQ,,"
+            target="_F960AFIPInfo"
+          >
+            <img
+              src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"
+              height="150px"
+              width="100px"
+            />
+          </a>
+        </Grid>
       </Grid>
-      <Grid item xs={12} md={3} lg={4} p={2}></Grid>
       <Grid item xs={12} mt={2}>
         <Typography
           variant="body2"
